@@ -1,0 +1,13 @@
+.produto_botao {
+    max-width: 100%;
+    margin: 2px;
+}
+
+.produto_botao button {
+    width: 100%;
+    border-radius: 30px;
+    height: 40px;
+    background-color: #004A8D;
+    border-color: #ffffff;
+    color: #F7941D;
+}

@@ -1,9 +1,11 @@
 .footer {
-    position: fixed;
-    left: 10%;
-    bottom: 0;
-    width: 80%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
     background-color: #004A8D;
     color: #F7941D;
     text-align: center;
+    height: 5%;
+    align-items: center;
+    min-height: 60px;
 }

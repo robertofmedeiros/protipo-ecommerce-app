@@ -1,97 +1,55 @@
-import React from 'react';
-import logo from './logo.svg';
-import './style.css';
 import logSenac from './logo-senac-cnc-color-100.png';
 import Menubar from './components/MenuBar';
 import Footer from './components/Footer';
+import Routers from './Routers';
+import './style.css'
+import { IconButton, InputBase, Paper } from '@mui/material';
+import SearchIcon from '@mui/icons-material/Search';
+import { useState } from 'react';
 
 function App() {
+  const [nome, setNome] = useState<string>();
+
   return (
     <div className='body'>
-      <div style={{ width: "80%" }}>
-
-        <header>
-          <div style={{ display: "flex", width: "100%" }}>
-            <h1 style={{ width: "100px", height: "59px" }}>
-              <img style={{ width: "100px", height: "59px" }} src={logSenac} alt="logo" />
-            </h1>
-          </div>
-          <Menubar />
-        </header>
-        <div className='container'>
-          <div className="produto">
-            <a className="produto_imagem" href="#"><img src="https://cdn.pixabay.com/photo/2013/11/24/11/10/lab-217043_1280.jpg"/></a>
-            <div className="produto_nome">
-              <p>
-                <a href="#">Teste 1</a>
-              </p>
+      <div style={{ maxWidth: "100%", width: "90%" }}>
+        <div className='header'>
+          <header>
+            <div style={{ display: "flex", width: "100%" }}>
+              <h1 style={{ width: "100px", height: "59px" }}>
+                <img style={{ width: "100px", height: "59px" }} src={logSenac} alt="logo" />
+              </h1>
+              <div className='campo-busca-main'>
+                <div className='campo-busca'>
+                  <Paper>
+                    <InputBase
+                      className='campos-busca-input-base'
+                      placeholder="Buscar por nome do produto"
+                      inputProps={{ color: "#F7941D" }}
+                      onChange={(event) => {
+                        if(event){
+                          setNome(event.target.value);
+                        }
+                      }}
+                      onKeyDown={(event) => {
+                        if (event.key === "Enter"){
+                          window.location.href = nome ? `/?busca=${nome}` : `/`;
+                        }
+                      }}
+                    />
+                    <IconButton type="submit" aria-label="search" href={nome ? `/?busca=${nome}` : `/`}>
+                      <SearchIcon />
+                    </IconButton>
+                  </Paper>
+                </div>
+              </div>
             </div>
-            <div className="produto_preco">
-              <p>R$10,00</p>
-            </div>
-            <div className='produto_botao'>
-              <button>Comprar</button>
-            </div>
-          </div>
-          <div className="produto">
-            <a className="produto_imagem" href="#"><img src="https://cdn.pixabay.com/photo/2017/06/28/10/53/board-2450236_1280.jpg"/></a>
-            <div className="produto_nome">
-              <p>
-                <a href="#">Teste 2</a>
-              </p>
-            </div>
-            <div className="produto_preco">
-              <p>R$10,00</p>
-            </div>
-            <div className='produto_botao'>
-              <button>Comprar</button>
-            </div>
-          </div>
-          <div className="produto">
-            <a className="produto_imagem" href="#"><img src="https://cdn.pixabay.com/photo/2017/10/05/21/45/laboratory-2821207_1280.jpg"/></a>
-            <div className="produto_nome">
-              <p>
-                <a href="#">Teste 3</a>
-              </p>
-            </div>
-            <div className="produto_preco">
-              <p>R$10,00</p>
-            </div>
-            <div className='produto_botao'>
-              <button>Comprar</button>
-            </div>
-          </div>
-          <div className="produto">
-            <a className="produto_imagem" href="#"><img src="https://cdn.pixabay.com/photo/2017/05/29/00/57/microscope-2352651_1280.jpg"/></a>
-            <div className="produto_nome">
-              <p>
-                <a href="#">Teste 4</a>
-              </p>
-            </div>
-            <div className="produto_preco">
-              <p>R$10,00</p>
-            </div>
-            <div className='produto_botao'>
-              <button>Comprar</button>
-            </div>
-          </div>
-          <div className="produto">
-            <a className="produto_imagem" href="#"><img src="https://cdn.pixabay.com/photo/2014/04/05/11/39/read-316508_1280.jpg"/></a>
-            <div className="produto_nome">
-              <p>
-                <a href="#">Teste 5</a>
-              </p>
-            </div>
-            <div className="produto_preco">
-              <p>R$10,00</p>
-            </div>
-            <div className='produto_botao'>
-              <button>Comprar</button>
-            </div>
-          </div>
+            <Menubar />
+          </header>
+          <Routers />
         </div>
+        <Footer />
       </div>
-      <Footer />
     </div>
   );
 }

@@ -5,10 +5,10 @@ const Menubar: FC = () => {
     return <>
         <div className="menu">
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#news">News</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/BAZAR">Bazar</a></li>
+                <li><a href="/ELETRO">Eletro</a></li>
+                <li><a href="/CASA_BANHO">Cama, Mesa e Banho</a></li>
             </ul>
         </div>
     </>

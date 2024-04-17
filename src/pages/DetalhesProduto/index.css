@@ -1,0 +1,71 @@
+.body-produto {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.produto-detalhe {
+    display: flex;
+    width: 60%;
+}
+
+.imagem-produto {
+    display: flex;
+    width: 80%;
+}
+
+.imagem-produto img {
+    width: 100%;
+    border: 1px;
+    border-radius: 10px;
+}
+
+.dados-produto {
+    display: flex;
+    padding-left: 10%;
+    flex-direction: column;
+    width: 100%;
+}
+
+.nome-produto{
+    color: #F7941D;
+}
+
+.dados-produto r {
+    width: 100%;
+}
+
+.separador {
+    height: 100%;
+    border-left: 2px solid;
+}
+
+hr {
+    width: 100%;
+    color: #004A8D;
+}
+
+.separador-dados-produto-hr {
+    width: 60%;
+}
+
+.codigo-produto {
+    color: #8b979f;
+    font-size: 12px;
+}
+
+.precos-produto {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-size: 22px;
+    height: 100%;
+}
+
+.descricao-produto {
+    display: flex;
+    width: 60%;
+    color: #8b979f;
+}
