@@ -1,6 +1,6 @@
 import { Axios } from "axios";
 
-const api = new Axios({ baseURL: "http://localhost:8080" });
+const api = new Axios({ baseURL: process.env.REACT_APP_API_BASE_URL });
 
 export enum STATUS_CODE {
     NO_CONTENT = 204,
