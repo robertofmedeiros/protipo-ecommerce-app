@@ -1,6 +1,7 @@
 .produto_botao {
     max-width: 100%;
     margin: 2px;
+    width: 100%;
 }
 
 .produto_botao button {

@@ -1,0 +1,26 @@
+.item {
+    border-bottom: 1px solid gray;
+    padding-bottom: 14px;
+    margin-top: 14px;
+}
+.box-imagem {
+    max-width: 60px;
+    min-width: 60px;
+}
+.imagem{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.box-detalhes {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 0;
+    max-width: 100%;
+    flex-direction: column;
+}
+
+.tamanho {
+    width: 600px;
+}

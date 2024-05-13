@@ -29,7 +29,7 @@
     width: 100%;
 }
 
-.nome-produto{
+.nome-produto {
     color: #F7941D;
 }
 
@@ -68,4 +68,54 @@ hr {
     display: flex;
     width: 60%;
     color: #8b979f;
+}
+
+.div-box {
+    width: 50%;
+}
+
+.box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.add {
+    top: 4px;
+    left: -40px;
+    z-index: 999;
+}
+
+.remove {
+    top: 4px;
+    left: 40px;
+    z-index: 999;
+}
+
+.input {
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    text-align: center;
+}
+
+.input input {
+    text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.div-comprar {
+  display: flex;
+  width: 50%;
+  align-items: center;
 }

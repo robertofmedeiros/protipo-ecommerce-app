@@ -1,4 +1,5 @@
 import { FC } from "react";
+import "./index.css";
 
 interface BotaComprarProperties {
     onClick: (event: any) => void;

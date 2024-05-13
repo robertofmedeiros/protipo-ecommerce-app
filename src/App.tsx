@@ -5,14 +5,21 @@ import Routers from './Routers';
 import './style.css'
 import { IconButton, InputBase, Paper } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { obterCarrinho } from './store/CarrinhoStore/carrinhoStoreUtil';
+import { ShoppingCart } from "@mui/icons-material";
+import IconeCarrinho from './components/IconeCarrinho';
 
 function App() {
   const [nome, setNome] = useState<string>();
 
+  useEffect(() => {
+    obterCarrinho();
+  }, [])
+
   return (
     <div className='body'>
-      <div style={{ maxWidth: "100%", width: "90%" }}>
+      <div className='container-principal'>
         <div className='header'>
           <header>
             <div style={{ display: "flex", width: "100%" }}>
@@ -27,12 +34,12 @@ function App() {
                       placeholder="Buscar por nome do produto"
                       inputProps={{ color: "#F7941D" }}
                       onChange={(event) => {
-                        if(event){
+                        if (event) {
                           setNome(event.target.value);
                         }
                       }}
                       onKeyDown={(event) => {
-                        if (event.key === "Enter"){
+                        if (event.key === "Enter") {
                           window.location.href = nome ? `/?busca=${nome}` : `/`;
                         }
                       }}
@@ -42,6 +49,9 @@ function App() {
                     </IconButton>
                   </Paper>
                 </div>
+              </div>
+              <div className="carrinho">
+                  <IconeCarrinho />
               </div>
             </div>
             <Menubar />

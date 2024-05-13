@@ -22,6 +22,12 @@
     text-decoration: none;
 }
 
+@media screen and (max-width: 600px) {
+    .menu li a {
+        padding: 7px 8px;
+    }
+}
+
 .menu li a:hover {
     background-color: #FDC180;
     color: #004A8D;

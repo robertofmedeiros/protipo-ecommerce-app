@@ -10,7 +10,7 @@
 
 .campo-busca-main {
     display: flex;
-    width: 100%;
+    width: 85%;
     align-items: center;
     justify-content: center;
 }
@@ -22,4 +22,27 @@
 .campos-busca-input-base {
     width: 92%;
     padding-left: 1%;
+    font-size: 10px;
+}
+
+.css-yz9k0d-MuiInputBase-input {
+    font-size: 10px;
+}
+
+.container-principal {
+    max-width: 100%;
+    width: 90%;
+}
+
+@media screen and (max-width: 600px) {
+    .container-principal {
+        width: 98%;
+    }
+}
+
+.carrinho {
+    display: flex;
+    width: 10%;
+    justify-content: center;
+    align-items: center;
 }
