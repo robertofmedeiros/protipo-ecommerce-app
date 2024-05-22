@@ -1,0 +1,39 @@
+.box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.add {
+    top: 4px;
+    left: -40px;
+    z-index: 999;
+}
+
+.remove {
+    top: 4px;
+    left: 40px;
+    z-index: 999;
+}
+
+.input {
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    text-align: center;
+}
+
+.input input {
+    text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}

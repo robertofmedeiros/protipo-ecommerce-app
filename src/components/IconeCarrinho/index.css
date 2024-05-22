@@ -24,3 +24,13 @@
 .tamanho {
     width: 600px;
 }
+
+.box-quantidade {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 200px;
+}
+
+.div-quantidade {
+    width: 50%;
+}

@@ -46,3 +46,10 @@
     justify-content: center;
     align-items: center;
 }
+
+.login {
+    display: flex;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+}

@@ -7,8 +7,8 @@ import { IconButton, InputBase, Paper } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import { useEffect, useState } from 'react';
 import { obterCarrinho } from './store/CarrinhoStore/carrinhoStoreUtil';
-import { ShoppingCart } from "@mui/icons-material";
 import IconeCarrinho from './components/IconeCarrinho';
+import IconeLogin from './components/IconeLogin';
 
 function App() {
   const [nome, setNome] = useState<string>();
@@ -49,6 +49,9 @@ function App() {
                     </IconButton>
                   </Paper>
                 </div>
+              </div>
+              <div className="login">
+                  <IconeLogin />
               </div>
               <div className="carrinho">
                   <IconeCarrinho />
