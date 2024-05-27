@@ -1,0 +1,12 @@
+.div-box-cliente {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.box-cliente {
+    padding: 10px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    width: 80%;
+}

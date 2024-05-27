@@ -1,0 +1,14 @@
+.popover-login {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.popover-login-linha {
+    padding-bottom: 5px;
+}
+
+.popover-login-linha p {
+    font-size: 12px;
+    text-align: center;
+}
