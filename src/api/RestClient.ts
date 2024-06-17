@@ -58,3 +58,41 @@ export const apiGet = async (url: string): Promise<IDataResponse> => {
         };
     }
 }
+
+export const apiPost = async (url: string, data: any): Promise<IDataResponse> => {
+    try {
+        const response: AxiosResponse = await api.post(url, JSON.stringify(data), {
+            headers: {
+                "Content-Type": "application/json"
+            }
+        });
+
+        if (response === undefined) {
+            return {
+                data: [],
+                message: "Api está indisponível",
+                statusCode: 500,
+            };
+        }
+
+        if (response.status === STATUS_CODE.NO_CONTENT) {
+            return {
+                data: [],
+                message: "Nunhum conteúdo a ser exibido",
+                statusCode: response.status,
+            };
+        }
+
+        return {
+            data: JSON.parse(response.data),
+            message: "Ok",
+            statusCode: response.status,
+        };
+    } catch (error) {
+        return {
+            data: null,
+            message: "Error",
+            statusCode: STATUS_CODE.INTERNAL_SERVER_ERROR,
+        };
+    }
+}

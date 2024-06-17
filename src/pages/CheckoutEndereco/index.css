@@ -1,0 +1,32 @@
+.card-endereco {
+    display: flex;
+    padding-bottom: 10px;
+}
+.card-endereco-body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.card-endereco-frame {
+    display: flex;
+}
+
+.card-endereco-action {
+    display: flex;
+    padding-right: 2%;
+}
+
+.card-endereco-titulo {
+    font-size: 22px;
+}
+
+.card-endereco-detalhes {
+    display: flex;
+    width: 100%;
+}
+
+.card-endereco-detalhes-elementos {
+    display: flex;
+    width: 25%;
+}

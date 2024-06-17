@@ -12,3 +12,13 @@ export const generos = [
         text: "Não quero responder"
     },
 ]
+
+export interface IClientes {
+    id:             number;
+    nome:           string;
+    sobrenome:      string;
+    email:          string;
+    dataNascimento: Date;
+    sexo:           string;
+    documento:      string;
+}
